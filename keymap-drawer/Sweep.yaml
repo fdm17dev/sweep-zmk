@@ -335,11 +335,11 @@ combos:
 - p: [12, 13]
   k: $$mdi:backspace-reverse-outline$$
 - p: [21, 22]
-  k: COPY
+  k: AC COPY
 - p: [22, 23]
-  k: PASTE
+  k: AC PASTE
 - p: [21, 23]
-  k: CUT
+  k: AC CUT
 - p: [16, 17]
   k: $$mdi:keyboard-esc$$
 - p: [9, 8]
