@@ -104,6 +104,45 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 11>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <12 13>;
+        };
+
+        copy {
+            bindings = <&kp K_COPY>;
+            key-positions = <21 22>;
+        };
+
+        paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <22 23>;
+        };
+
+        cut {
+            bindings = <&kp K_CUT>;
+            key-positions = <21 23>;
+        };
+
+        r_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <16 17>;
+        };
+
+        mse {
+            bindings = <&tog 4>;
+            key-positions = <17 18>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -117,7 +156,7 @@
 &kp LEFT  &kp UP  &kp RET  &kp DOWN  &kp RIGHT  &kp LEFT   &kp DOWN  &kp RET    &kp UP   &kp RIGHT
             >;
 
-            sensor-bindings = <&Scroll_D_U>, <&Scroll_RL>;
+            sensor-bindings = <&Scroll_LR>, <&Scroll_D_U>;
         };
 
         lower_layer {
@@ -131,8 +170,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp DOWN UP_ARROW>,
-                <&inc_dec_kp RIGHT LEFT>;
+                <&inc_dec_kp C_BRI_UP C_BRI_DEC>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         raise_layer {
@@ -164,13 +203,13 @@
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        layer_4 {
+        mice_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &mkp LCLK       &msc SCRL_DOWN   &msc SCRL_UP  &mkp RCLK        &mkp MCLK
+&trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans        &trans           &trans
+                &trans  &trans  &trans  &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans        &trans           &trans
             >;
         };
 
