@@ -33,7 +33,7 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - Lower Layer
-  - LGUI
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - Raise Layer
   - {t: '$$mdi:keyboard-return$$', type: enter}
