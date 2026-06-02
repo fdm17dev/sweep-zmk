@@ -202,8 +202,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
@@ -330,7 +330,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [0, 11]
+- p: [0, 1]
   k: $$mdi:keyboard-esc$$
 - p: [12, 13]
   k: $$mdi:backspace-reverse-outline$$
@@ -342,5 +342,5 @@ combos:
   k: CUT
 - p: [16, 17]
   k: $$mdi:keyboard-esc$$
-- p: [17, 18]
+- p: [9, 34]
   k: {t: mice, h: toggle}
