@@ -146,6 +146,11 @@
             bindings = <&kp TAB>;
             key-positions = <10 11>;
         };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <11 12>;
+        };
     };
 
     keymap {
@@ -182,11 +187,11 @@
         raise_layer {
             display-name = "Raise Layer";
             bindings = <
-&kp NUMBER_1       &kp N2          &kp N3        &kp N4        &kp N5     &kp N6          &kp N7          &kp N8        &kp N9           &kp N0
-&kp PRINTSCREEN    &sk LEFT_SHIFT  &sk LEFT_ALT  &sk LEFT_GUI  &sk LCTRL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE
-&kp K_APPLICATION  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &kp LCTRL  &kp HOME        &kp PAGE_DOWN   &kp PG_UP     &kp END          &kp INSERT
-                                   &trans        &trans        &sk LCTRL  &sk LEFT_SHIFT  &trans          &trans
-&trans             &trans          &trans        &trans        &trans     &trans          &trans          &trans        &trans           &trans
+&kp NUMBER_1       &kp N2          &kp N3        &kp N4     &kp N5        &kp N6          &kp N7          &kp N8        &kp N9           &kp N0
+&kp PRINTSCREEN    &sk LEFT_SHIFT  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_GUI  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE
+&kp K_APPLICATION  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_GUI  &kp HOME        &kp PAGE_DOWN   &kp PG_UP     &kp END          &kp INSERT
+                                   &trans        &trans     &kp ENTER     &kp SPACE       &trans          &trans
+&trans             &trans          &trans        &trans     &trans        &trans          &trans          &trans        &trans           &trans
             >;
 
             sensor-bindings =
