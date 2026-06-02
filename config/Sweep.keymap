@@ -109,7 +109,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 11>;
+            key-positions = <0 1>;
         };
 
         del {
@@ -139,7 +139,7 @@
 
         mse {
             bindings = <&tog 4>;
-            key-positions = <17 18>;
+            key-positions = <9 34>;
         };
     };
 
@@ -205,11 +205,11 @@
 
         mice_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &mkp LCLK       &msc SCRL_DOWN   &msc SCRL_UP  &mkp RCLK        &mkp MCLK
-&trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans        &trans           &trans
-                &trans  &trans  &trans  &trans          &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans        &trans           &trans
+&trans  &trans  &trans  &trans     &trans     &mkp LCLK       &msc SCRL_DOWN   &msc SCRL_UP  &mkp RCLK        &mkp MCLK
+&trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans  &trans  &trans  &trans     &trans     &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans        &trans           &trans
+                &trans  &trans     &trans     &trans          &trans           &trans
+&trans  &trans  &trans  &trans     &trans     &trans          &trans           &trans        &trans           &trans
             >;
         };
 
