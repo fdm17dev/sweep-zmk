@@ -139,7 +139,7 @@
 
         mse {
             bindings = <&tog 4>;
-            key-positions = <9 34>;
+            key-positions = <9 8>;
         };
     };
 
