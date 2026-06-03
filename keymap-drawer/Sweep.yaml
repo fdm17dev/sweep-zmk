@@ -199,8 +199,6 @@ combos:
   k: AC PASTE
 - p: [21, 23]
   k: AC CUT
-- p: [4, 3]
-  k: {t: Raise Layer, h: toggle}
 - p: [10, 11]
   k: $$mdi:keyboard-tab$$
 - p: [11, 12]
