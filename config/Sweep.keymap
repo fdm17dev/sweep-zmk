@@ -112,8 +112,8 @@
             key-positions = <0 1>;
         };
 
-        del {
-            bindings = <&kp DELETE>;
+        enter {
+            bindings = <&kp ENTER>;
             key-positions = <12 13>;
         };
 
@@ -140,11 +140,6 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <11 12>;
-        };
-
-        double_quotes {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <5 6>;
         };
 
         less_than {
@@ -192,13 +187,13 @@
             key-positions = <18 19>;
         };
 
-        minus {
-            bindings = <&kp MINUS>;
+        doublequotes {
+            bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <8 9>;
         };
 
-        equal {
-            bindings = <&kp EQUAL>;
+        quote {
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <28 29>;
         };
 
@@ -207,39 +202,39 @@
             key-positions = <16 7>;
         };
 
-        underscrore {
-            bindings = <&kp UNDERSCORE>;
+        minus {
+            bindings = <&kp MINUS>;
             key-positions = <16 8>;
         };
 
-        single_quote {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <16 18>;
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <16 9>;
         };
 
         grave {
             bindings = <&kp GRAVE>;
-            key-positions = <16 28>;
+            key-positions = <16 18>;
         };
 
         qmark {
             bindings = <&kp QUESTION>;
-            key-positions = <6 8>;
+            key-positions = <16 28>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <6 18>;
+            key-positions = <16 19>;
         };
 
         tilde {
             bindings = <&kp TILDE>;
-            key-positions = <15 6>;
+            key-positions = <16 29>;
         };
 
         backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <15 7>;
+            key-positions = <16 33>;
         };
 
         scroll_up {
@@ -250,6 +245,16 @@
         scroll_down {
             bindings = <&msc SCRL_DOWN>;
             key-positions = <26 27 28>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <5 6>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <13 14>;
         };
     };
 
@@ -288,11 +293,11 @@
 
         raise_layer {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR      &kp PERCENT  &kp CARET       &kp AMPERSAND    &kp ASTERISK  &kp EQUAL        &mkp MCLK
-&trans           &trans       &mkp MCLK  &mkp LCLK       &mkp RCLK    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp BACKSPACE
-&trans           &trans       &trans     &kp K_PREVIOUS  &kp K_NEXT   &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans        &trans           &trans
-                              &trans     &trans          &mkp RCLK    &mkp LCLK       &trans           &trans
-&trans           &trans       &trans     &trans          &trans       &trans          &trans           &trans        &trans           &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR          &kp PERCENT          &kp CARET       &kp AMPERSAND    &kp ASTERISK  &kp EQUAL        &mkp MCLK
+&trans           &trans       &mkp MCLK  &mkp LCLK           &mkp RCLK            &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp BACKSPACE
+&trans           &trans       &trans     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans        &trans           &trans
+                              &trans     &trans              &mkp RCLK            &mkp LCLK       &trans           &trans
+&trans           &trans       &trans     &trans              &trans               &trans          &trans           &trans        &trans           &trans
             >;
 
             label = "Raise Layer";
