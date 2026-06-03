@@ -194,11 +194,11 @@ combos:
 - p: [12, 13]
   k: $$mdi:backspace-reverse-outline$$
 - p: [21, 22]
-  k: AC COPY
+  k: Ctl+C
 - p: [22, 23]
-  k: AC PASTE
+  k: Ctl+V
 - p: [21, 23]
-  k: AC CUT
+  k: Ctl+X
 - p: [10, 11]
   k: $$mdi:keyboard-tab$$
 - p: [11, 12]
