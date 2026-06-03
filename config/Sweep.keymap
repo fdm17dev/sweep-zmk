@@ -132,14 +132,9 @@
             key-positions = <21 23>;
         };
 
-        r_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <16 17>;
-        };
-
         mse {
             bindings = <&tog 4>;
-            key-positions = <9 8>;
+            key-positions = <4 3>;
         };
 
         tab {
@@ -150,6 +145,106 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <11 12>;
+        };
+
+        double_quotes {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <5 6>;
+        };
+
+        less_than {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <15 16>;
+        };
+
+        great_than {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <25 26>;
+        };
+
+        lpar {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <6 7>;
+        };
+
+        lbrc {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <16 17>;
+        };
+
+        lbkt {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <26 27>;
+        };
+
+        rpar {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <7 8>;
+        };
+
+        rbrc {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <17 18>;
+        };
+
+        rbkt {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <27 28>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <18 19>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <8 9>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <28 29>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <16 7>;
+        };
+
+        underscrore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <16 8>;
+        };
+
+        single_quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <16 18>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <16 28>;
+        };
+
+        qmark {
+            bindings = <&kp QUESTION>;
+            key-positions = <6 8>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <6 18>;
+        };
+
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <15 6>;
+        };
+
+        backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <15 7>;
         };
     };
 
@@ -172,11 +267,11 @@
         lower_layer {
             display-name = "Lower Layer";
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN     &kp HASH          &kp DOLLAR            &kp PERCENT     &kp CARET        &kp AMPERSAND          &kp ASTERISK       &kp EQUAL  &kp QUESTION
-&kp GRAVE        &kp MINUS       &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp PLUS   &kp DOUBLE_QUOTES
-&kp TILDE        &kp UNDERSCORE  &kp LESS_THAN     &kp COMMA             &kp COLON       &kp SEMICOLON    &kp DOT                &kp GREATER_THAN   &kp PIPE   &kp SINGLE_QUOTE
-                                 &trans            &trans                &trans          &trans           &trans                 &trans
-&trans           &trans          &trans            &trans                &trans          &trans           &trans                 &trans             &trans     &trans
+&kp EXCLAMATION  &kp AT_SIGN    &kp HASH          &kp DOLLAR            &kp PERCENT     &kp CARET        &kp AMPERSAND          &kp ASTERISK       &kp EQUAL  &kp QUESTION
+&kp GRAVE        &kp MINUS      &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp PLUS   &kp DOUBLE_QUOTES
+&kp TILDE        &kp BACKSLASH  &kp UNDERSCORE    &kp LESS_THAN         &kp COLON       &kp SEMICOLON    &kp GREATER_THAN       &trans             &kp PIPE   &kp SINGLE_QUOTE
+                                &trans            &trans                &trans          &trans           &trans                 &trans
+&trans           &trans         &trans            &trans                &trans          &trans           &trans                 &trans             &trans     &trans
             >;
 
             sensor-bindings =
