@@ -118,17 +118,17 @@
         };
 
         copy {
-            bindings = <&kp C_AC_COPY>;
+            bindings = <&kp LC(C)>;
             key-positions = <21 22>;
         };
 
         paste {
-            bindings = <&kp C_AC_PASTE>;
+            bindings = <&kp LC(V)>;
             key-positions = <22 23>;
         };
 
         cut {
-            bindings = <&kp C_AC_CUT>;
+            bindings = <&kp LC(X)>;
             key-positions = <21 23>;
         };
 
