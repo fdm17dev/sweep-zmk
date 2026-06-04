@@ -249,3 +249,7 @@ combos:
   k: {t: '=', s: +}
 - p: [13, 14]
   k: $$mdi:backspace-reverse-outline$$
+- p: [1, 2]
+  k: Ctl+Z
+- p: [2, 3]
+  k: Ctl+Y
