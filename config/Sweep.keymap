@@ -256,6 +256,16 @@
             bindings = <&kp DELETE>;
             key-positions = <13 14>;
         };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <1 2>;
+        };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <2 3>;
+        };
     };
 
     keymap {
