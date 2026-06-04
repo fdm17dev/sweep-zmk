@@ -266,6 +266,11 @@
             bindings = <&kp LC(Y)>;
             key-positions = <2 3>;
         };
+
+        sellect-all {
+            bindings = <&kp LC(A)>;
+            key-positions = <20 21>;
+        };
     };
 
     keymap {
