@@ -296,9 +296,13 @@ combos:
   l: [Default Layer]
 - p: [13, 24]
   k: $$mdi:apple-keyboard-option$$
+  l: [Default Layer]
 - p: [13, 24, 32]
   k: Alt+$$mdi:apple-keyboard-shift$$
+  l: [Default Layer]
 - p: [14, 24]
   k: $$mdi:apple-keyboard-command$$
+  l: [Default Layer]
 - p: [14, 24, 32]
   k: Gui+$$mdi:apple-keyboard-shift$$
+  l: [Default Layer]
