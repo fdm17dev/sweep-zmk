@@ -110,16 +110,16 @@
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <13 14>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
 
@@ -158,8 +158,8 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <11 12>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
 
@@ -375,39 +375,39 @@
             bindings = <&kp LCTRL>;
             key-positions = <23 24>;
             layers = <0>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
         };
 
         ctrl-shift {
             bindings = <&kp LC(LEFT_SHIFT)>;
             key-positions = <23 24 32>;
             layers = <0>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
         };
 
         lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <13 24>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
 
         alt-shift {
             bindings = <&kp LA(LEFT_SHIFT)>;
             key-positions = <13 24 32>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
 
         lgui {
             bindings = <&kp LEFT_GUI>;
             key-positions = <14 24>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
 
@@ -415,8 +415,8 @@
             bindings = <&kp LG(LEFT_SHIFT)>;
             key-positions = <14 24 32>;
             layers = <0>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
         };
     };
 
