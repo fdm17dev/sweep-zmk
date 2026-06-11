@@ -262,7 +262,7 @@
         less-than {
             bindings = <&kp LESS_THAN>;
             key-positions = <15 16>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -270,7 +270,7 @@
         great-than {
             bindings = <&kp GREATER_THAN>;
             key-positions = <25 26>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -278,7 +278,7 @@
         lpar {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <6 7>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -286,7 +286,7 @@
         lbrc {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <16 17>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -294,7 +294,7 @@
         lbkt {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <26 27>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -302,7 +302,7 @@
         rpar {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <7 8>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -310,7 +310,7 @@
         rbrc {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <17 18>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -318,7 +318,7 @@
         rbkt {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <27 28>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -326,7 +326,7 @@
         colon {
             bindings = <&kp COLON>;
             key-positions = <18 19>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -334,7 +334,7 @@
         double-quotes {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <8 9>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -342,7 +342,7 @@
         quote {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <28 29>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -350,7 +350,7 @@
         plus {
             bindings = <&kp PLUS>;
             key-positions = <16 7>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -358,7 +358,7 @@
         minus {
             bindings = <&kp MINUS>;
             key-positions = <16 8>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -366,7 +366,7 @@
         under-score {
             bindings = <&kp UNDERSCORE>;
             key-positions = <16 9>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -374,7 +374,7 @@
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <16 18>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -382,7 +382,7 @@
         qmark {
             bindings = <&kp QUESTION>;
             key-positions = <16 28>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -390,7 +390,7 @@
         pipe {
             bindings = <&kp PIPE>;
             key-positions = <16 19>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -398,7 +398,7 @@
         tilde {
             bindings = <&kp TILDE>;
             key-positions = <16 29>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -406,7 +406,7 @@
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <16 33>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
         };
@@ -414,7 +414,7 @@
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <5 6>;
-            timeout-ms = <40>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <100>;
             layers = <0>;
         };
