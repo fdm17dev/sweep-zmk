@@ -195,6 +195,30 @@ combos:
 - p: [13, 14]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [Default Layer]
+- p: [10, 11]
+  k: $$mdi:keyboard-tab$$
+  l: [Default Layer]
+- p: [11, 12]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+  l: [Default Layer]
+- p: [23, 24]
+  k: $$mdi:apple-keyboard-control$$
+  l: [Default Layer]
+- p: [23, 24, 32]
+  k: Ctl+$$mdi:apple-keyboard-shift$$
+  l: [Default Layer]
+- p: [13, 24]
+  k: $$mdi:apple-keyboard-option$$
+  l: [Default Layer]
+- p: [13, 24, 32]
+  k: Alt+$$mdi:apple-keyboard-shift$$
+  l: [Default Layer]
+- p: [14, 24]
+  k: $$mdi:apple-keyboard-command$$
+  l: [Default Layer]
+- p: [14, 24, 32]
+  k: Gui+$$mdi:apple-keyboard-shift$$
+  l: [Default Layer]
 - p: [21, 22]
   k: Ctl+C
   l: [Default Layer]
@@ -204,11 +228,14 @@ combos:
 - p: [21, 23]
   k: Ctl+X
   l: [Default Layer]
-- p: [10, 11]
-  k: $$mdi:keyboard-tab$$
+- p: [1, 2]
+  k: Ctl+Z
   l: [Default Layer]
-- p: [11, 12]
-  k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [2, 3]
+  k: Ctl+Y
+  l: [Default Layer]
+- p: [20, 21]
+  k: Ctl+A
   l: [Default Layer]
 - p: [15, 16]
   k: <
@@ -278,31 +305,4 @@ combos:
   l: [Default Layer]
 - p: [13, 12]
   k: $$mdi:backspace-reverse-outline$$
-  l: [Default Layer]
-- p: [1, 2]
-  k: Ctl+Z
-  l: [Default Layer]
-- p: [2, 3]
-  k: Ctl+Y
-  l: [Default Layer]
-- p: [20, 21]
-  k: Ctl+A
-  l: [Default Layer]
-- p: [23, 24]
-  k: $$mdi:apple-keyboard-control$$
-  l: [Default Layer]
-- p: [23, 24, 32]
-  k: Ctl+$$mdi:apple-keyboard-shift$$
-  l: [Default Layer]
-- p: [13, 24]
-  k: $$mdi:apple-keyboard-option$$
-  l: [Default Layer]
-- p: [13, 24, 32]
-  k: Alt+$$mdi:apple-keyboard-shift$$
-  l: [Default Layer]
-- p: [14, 24]
-  k: $$mdi:apple-keyboard-command$$
-  l: [Default Layer]
-- p: [14, 24, 32]
-  k: Gui+$$mdi:apple-keyboard-shift$$
   l: [Default Layer]
