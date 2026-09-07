@@ -5,6 +5,3 @@ config SHIELD_Sweep_LEFT
 # No whitespace after the comma or in your part name!
 config SHIELD_Sweep_RIGHT
     def_bool $(shields_list_contains,Sweep_right)
-
-
-CONFIG_ZMK_SOFT_OFF=y

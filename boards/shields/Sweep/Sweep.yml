@@ -1,13 +1,9 @@
 file_format: "1"
-id: Sweep
+id: sweep
 name: Sweep
 type: shield
 url: https://github.com/Haha1609/Michila
-type: board
-arch: arm
-output:
-  - usb
-  - ble
+requires: [pro_micro]
 features:
   - keys
   - studio
@@ -16,5 +12,3 @@ features:
 siblings:
   - Sweep_left
   - Sweep_right
-
-  
