@@ -6,9 +6,24 @@ manifest:
       url-base: https://github.com/zmkfirmware
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: t-ogura
+      url-base: https://github.com/t-ogura
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    # Telemetry over BLE advertisement: broadcasts active layer, modifiers, BLE
+    # profile slot and both halves' battery in a 26-byte manufacturer-data
+    # packet. None of that is reachable any other way - ZMK keeps the profile
+    # index and the layer state inside the firmware (they only ever reach an
+    # on-keyboard display widget), and the Studio RPC schema has no telemetry
+    # messages at all. See tech-docs ZMK-STATUS/research-device-manager-plan.md.
+    #
+    # Pinned to a tag deliberately: `revision: main` would silently pull
+    # breaking changes on every CI rebuild.
+    - name: prospector-zmk-module
+      remote: t-ogura
+      revision: v2.2.3
+      path: modules/prospector-zmk-module
   self:
     path: config
