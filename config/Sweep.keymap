@@ -120,11 +120,20 @@
         // host (computer/phone) side, or it will keep trying to reconnect
         // and fail ("Security failed") - this is a hard BLE requirement ZMK
         // documents itself, not something a keymap/firmware change can fix.
+        // zmk,behavior-hold-tap's `bindings` property is devicetree type
+        // "phandles" (bare references only, ONE <...> group) - unlike
+        // macro/tap-dance's `bindings`, which is "phandle-array" and allows
+        // each entry its own inline args across multiple <...> groups
+        // (see TD01 above: `<&kp MINUS>, <&kp PERIOD>;`). `&bt BT_SEL 0`
+        // already carries its own two args, so it can't be listed directly
+        // here - both sides have to be bare, zero-arg macros instead
+        // (bt_sel_N / bt_clr_N below), referenced as `<&bt_sel_0 &bt_clr_0>`
+        // in one bracket.
         bhs0: bhs0 {
             compatible = "zmk,behavior-hold-tap";
             label = "BHS0";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&bt_clr_0>;
+            #binding-cells = <2>;
+            bindings = <&bt_sel_0 &bt_clr_0>;
             tapping-term-ms = <3000>;
             flavor = "hold-preferred";
         };
@@ -132,8 +141,8 @@
         bhs1: bhs1 {
             compatible = "zmk,behavior-hold-tap";
             label = "BHS1";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&bt_clr_1>;
+            #binding-cells = <2>;
+            bindings = <&bt_sel_1 &bt_clr_1>;
             tapping-term-ms = <3000>;
             flavor = "hold-preferred";
         };
@@ -141,8 +150,8 @@
         bhs2: bhs2 {
             compatible = "zmk,behavior-hold-tap";
             label = "BHS2";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&bt_clr_2>;
+            #binding-cells = <2>;
+            bindings = <&bt_sel_2 &bt_clr_2>;
             tapping-term-ms = <3000>;
             flavor = "hold-preferred";
         };
@@ -150,8 +159,8 @@
         bhs3: bhs3 {
             compatible = "zmk,behavior-hold-tap";
             label = "BHS3";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3>, <&bt_clr_3>;
+            #binding-cells = <2>;
+            bindings = <&bt_sel_3 &bt_clr_3>;
             tapping-term-ms = <3000>;
             flavor = "hold-preferred";
         };
@@ -159,17 +168,55 @@
         bhs4: bhs4 {
             compatible = "zmk,behavior-hold-tap";
             label = "BHS4";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4>, <&bt_clr_4>;
+            #binding-cells = <2>;
+            bindings = <&bt_sel_4 &bt_clr_4>;
             tapping-term-ms = <3000>;
             flavor = "hold-preferred";
         };
     };
 
     macros {
-        // Select profile N then immediately clear it - self-contained, works
-        // regardless of which profile was active before. Referenced only by
-        // the bhsN hold-tap behaviors above (hold side).
+        // Tap side of bhsN: plain profile select, same as the old bare
+        // `&bt BT_SEL N` binding. Exists only because hold-tap's bindings
+        // property can't take `&bt BT_SEL N` directly (see comment above).
+        bt_sel_0: bt_sel_0 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_SEL_0";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>;
+        };
+
+        bt_sel_1: bt_sel_1 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_SEL_1";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>;
+        };
+
+        bt_sel_2: bt_sel_2 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_SEL_2";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>;
+        };
+
+        bt_sel_3: bt_sel_3 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_SEL_3";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>;
+        };
+
+        bt_sel_4: bt_sel_4 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_SEL_4";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>;
+        };
+
+        // Hold side of bhsN: select profile N then immediately clear it -
+        // self-contained, works regardless of which profile was active
+        // before.
         bt_clr_0: bt_clr_0 {
             compatible = "zmk,behavior-macro";
             label = "BT_CLR_0";
@@ -579,11 +626,11 @@
             // host side after clearing here - ZMK only clears its own half
             // of the pairing.
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5        &kp F6        &kp F7  &kp F8          &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &kp F11       &kp F12       &trans  &trans          &trans  &trans
-&bhs0   &bhs1   &bhs2   &bhs3   &bhs4         &kp CAPSLOCK  &trans  &bt BT_CLR_ALL  &trans  &bt BT_CLR
-                        &trans  &trans        &out OUT_BLE  &out OUT_USB  &trans    &trans
-&trans  &trans  &trans  &trans  &trans        &trans        &trans  &trans          &trans  &trans
+&kp F1     &kp F2     &kp F3     &kp F4     &kp F5        &kp F6        &kp F7  &kp F8          &kp F9  &kp F10
+&trans     &trans     &trans     &trans     &kp F11       &kp F12       &trans  &trans          &trans  &trans
+&bhs0 0 0  &bhs1 0 0  &bhs2 0 0  &bhs3 0 0  &bhs4 0 0     &kp CAPSLOCK  &trans  &bt BT_CLR_ALL  &trans  &bt BT_CLR
+                                  &trans     &trans        &out OUT_BLE  &out OUT_USB  &trans    &trans
+&trans     &trans     &trans     &trans     &trans        &trans        &trans  &trans          &trans  &trans
             >;
 
             label = "FNC Layer";
