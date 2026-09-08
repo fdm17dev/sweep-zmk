@@ -102,6 +102,108 @@
             #sensor-binding-cells = <0>;
             bindings = <&mmv MOVE_RIGHT>, <&mmv MOVE_LEFT>;
         };
+
+        // Per-profile select-or-clear. Tap = select that BLE profile (same as
+        // plain `&bt BT_SEL N` before). Hold ~3s = select AND clear that
+        // profile's bond in one action (see bt_clr_N macros below), so
+        // clearing one specific profile no longer depends on landing two
+        // separate keypresses (BT_SEL N then the shared BT_CLR key) while
+        // holding the fnc_layer chord (mo 1 + mo 2 via conditional_layers) -
+        // dropping the chord between those two presses silently sent BT_CLR
+        // to the default layer instead of clearing anything. 3s (not the
+        // 300ms used for &mt/&lt above) matches &soft_off's hold-time-ms
+        // below, on purpose: this deletes pairing data, so it should take a
+        // deliberate hold, not a quick tap-preferred resolve.
+        //
+        // NOTE: clearing a profile here only clears the KEYBOARD's side of
+        // the bond. You must also "forget"/remove the matching device on the
+        // host (computer/phone) side, or it will keep trying to reconnect
+        // and fail ("Security failed") - this is a hard BLE requirement ZMK
+        // documents itself, not something a keymap/firmware change can fix.
+        bhs0: bhs0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BHS0";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&bt_clr_0>;
+            tapping-term-ms = <3000>;
+            flavor = "hold-preferred";
+        };
+
+        bhs1: bhs1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BHS1";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&bt_clr_1>;
+            tapping-term-ms = <3000>;
+            flavor = "hold-preferred";
+        };
+
+        bhs2: bhs2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BHS2";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&bt_clr_2>;
+            tapping-term-ms = <3000>;
+            flavor = "hold-preferred";
+        };
+
+        bhs3: bhs3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BHS3";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>, <&bt_clr_3>;
+            tapping-term-ms = <3000>;
+            flavor = "hold-preferred";
+        };
+
+        bhs4: bhs4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BHS4";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>, <&bt_clr_4>;
+            tapping-term-ms = <3000>;
+            flavor = "hold-preferred";
+        };
+    };
+
+    macros {
+        // Select profile N then immediately clear it - self-contained, works
+        // regardless of which profile was active before. Referenced only by
+        // the bhsN hold-tap behaviors above (hold side).
+        bt_clr_0: bt_clr_0 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_CLR_0";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&bt BT_CLR>;
+        };
+
+        bt_clr_1: bt_clr_1 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_CLR_1";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&bt BT_CLR>;
+        };
+
+        bt_clr_2: bt_clr_2 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_CLR_2";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&bt BT_CLR>;
+        };
+
+        bt_clr_3: bt_clr_3 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_CLR_3";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>, <&bt BT_CLR>;
+        };
+
+        bt_clr_4: bt_clr_4 {
+            compatible = "zmk,behavior-macro";
+            label = "BT_CLR_4";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>, <&bt BT_CLR>;
+        };
     };
 
     combos {
@@ -467,12 +569,21 @@
         };
 
         fnc_layer {
+            // Bluetooth profile keys: tap = select profile N (as before).
+            // Hold ~3s = select AND clear that profile's bond in one action
+            // (bhs0..bhs4, see the `behaviors` block up top) - use this to
+            // remove pairing for ONE specific profile without touching the
+            // others. `&bt BT_CLR` (bottom-right) still clears whatever
+            // profile is *currently selected*; `&bt BT_CLR_ALL` still wipes
+            // all 5. Remember to also "forget"/remove the device on the
+            // host side after clearing here - ZMK only clears its own half
+            // of the pairing.
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &kp F7  &kp F8          &kp F9  &kp F10
-&trans        &trans        &trans        &trans        &kp F11       &kp F12       &trans  &trans          &trans  &trans
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp CAPSLOCK  &trans  &bt BT_CLR_ALL  &trans  &bt BT_CLR
-                            &trans        &trans        &out OUT_BLE  &out OUT_USB  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans          &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5        &kp F6        &kp F7  &kp F8          &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &kp F11       &kp F12       &trans  &trans          &trans  &trans
+&bhs0   &bhs1   &bhs2   &bhs3   &bhs4         &kp CAPSLOCK  &trans  &bt BT_CLR_ALL  &trans  &bt BT_CLR
+                        &trans  &trans        &out OUT_BLE  &out OUT_USB  &trans    &trans
+&trans  &trans  &trans  &trans  &trans        &trans        &trans  &trans          &trans  &trans
             >;
 
             label = "FNC Layer";
