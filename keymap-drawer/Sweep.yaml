@@ -162,11 +162,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&bt_clr_0', h: '&bt_sel_0'}
-  - {t: '&bt_clr_1', h: '&bt_sel_1'}
-  - {t: '&bt_clr_2', h: '&bt_sel_2'}
-  - {t: '&bt_clr_3', h: '&bt_sel_3'}
-  - {t: '&bt_clr_4', h: '&bt_sel_4'}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:transfer$$', type: trans}
   - BT CLR ALL
