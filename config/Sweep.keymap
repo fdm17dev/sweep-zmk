@@ -397,7 +397,7 @@
 
         tilde {
             bindings = <&kp TILDE>;
-            key-positions = <16 29>;
+            key-positions = <16 27>;
             timeout-ms = <25>;
             require-prior-idle-ms = <180>;
             layers = <0>;
