@@ -297,7 +297,7 @@ combos:
 - p: [16, 19]
   k: '|'
   l: [Default Layer]
-- p: [16, 29]
+- p: [16, 27]
   k: '~'
   l: [Default Layer]
 - p: [16, 33]
